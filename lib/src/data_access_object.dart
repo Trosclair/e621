@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'resources/comment/comment_group_by.dart';
+import 'resources/comment/comment_order.dart';
 import 'utils/pool_category.dart';
 import 'package:http/http.dart';
 import 'package:http_parser/http_parser.dart';
@@ -19,6 +21,7 @@ import 'utils/tag_implication_order.dart';
 import 'utils/tag_implication_status.dart';
 import 'utils/tag_order.dart';
 
+part 'dao/comment_data_access_object.dart';
 part 'dao/favorite_data_access_object.dart';
 part 'dao/flag_data_access_object.dart';
 part 'dao/note_data_access_object.dart';

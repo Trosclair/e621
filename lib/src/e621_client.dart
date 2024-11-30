@@ -24,6 +24,9 @@ class E621Client extends BaseClient {
   /// The authorization header to use for requests.
   String? _authHeader;
 
+  /// The comments data access object.
+  late final CommentDataAccessObject comments;
+
   /// The favorites data access object.
   late final FavoriteDataAccessObject favorites;
 
@@ -62,6 +65,7 @@ class E621Client extends BaseClient {
       required this.userAgent,
       Client? client})
       : _inner = client ?? Client() {
+    comments = CommentDataAccessObject(this);
     favorites = FavoriteDataAccessObject(this);
     flags = FlagDataAccessObject(this);
     notes = NoteDataAccessObject(this);

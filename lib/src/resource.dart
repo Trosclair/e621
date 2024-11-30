@@ -9,6 +9,7 @@ import 'resources/post/score.dart';
 import 'resources/post/tags.dart';
 import 'utils/pool_category.dart';
 
+part 'resources/comment.dart';
 part 'resources/flag.dart';
 part 'resources/note.dart';
 part 'resources/pool.dart';
