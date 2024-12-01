@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'resources/comment/comment_group_by.dart';
-import 'resources/comment/comment_order.dart';
+import 'utils/comment_group_by.dart';
+import 'utils/comment_order.dart';
 import 'utils/pool_category.dart';
 import 'package:http/http.dart';
 import 'package:http_parser/http_parser.dart';

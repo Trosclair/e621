@@ -1,4 +1,0 @@
-enum CommentGroupBy {
-  comment,
-  post
-}

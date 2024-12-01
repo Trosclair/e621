@@ -76,6 +76,8 @@ export 'src/resource.dart';
 export 'src/data_access_object.dart';
 
 /// Utilities
+export '/src/utils/comment_group_by.dart';
+export '/src/utils/comment_order.dart';
 export '/src/utils/pool_category.dart';
 export '/src/utils/pool_order.dart';
 export '/src/utils/post_rating.dart';

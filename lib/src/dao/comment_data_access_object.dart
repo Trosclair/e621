@@ -17,40 +17,10 @@ final class CommentDataAccessObject extends DataAccessObject<Comment> {
     bool? isHidden, 
     bool? doNotBumpPost}) async {
 
-    String? commentOrderString;
-    switch (commentOrder) {
-      case CommentOrder.idAscending:
-        commentOrderString = 'id_ascending';
-        break;
-      case CommentOrder.idDescending:
-        commentOrderString = 'id_descending';
-        break;
-      case CommentOrder.status:
-        commentOrderString = 'status';
-        break;
-      case CommentOrder.statusDescending:
-        commentOrderString = 'status_descending';
-        break;
-      case CommentOrder.updatedAtDescending:
-        commentOrderString = 'updated_at_descending';
-        break;
-      default:
-    }
-
-    String? commentGroupByString;
-    switch (commentGroupBy) {
-      case CommentGroupBy.comment:
-        commentGroupByString = 'comment';
-        break;
-      case CommentGroupBy.post:
-        commentGroupByString = 'post';
-        break;
-      default:
-    }
     final Map<String, String> queryParameters = {
-      ...(commentOrderString != null ? {'search[order]': commentOrderString} : {}),
-      ...({'group_by': commentGroupByString ?? 'comment'}),
-      ...(postIds != null ? {'search[post_Id]': postIds.join(',')} : {}),
+      ...(commentOrder != null ? {'search[order]': commentOrder.toString()} : {}),
+      ...(commentGroupBy != null ? {'group_by': commentGroupBy.toString()} : {'group_by': 'comment'}),
+      ...(postIds != null ? {'search[post_id]': postIds.join(',')} : {}),
       ...(body != null ? {'search[body_matches]': body} : {}),
       ...(postTagsMatch != null ? {'search[post_tags_match]': postTagsMatch} : {}),
       ...(postNoteUpdaterName != null ? {'search[post_note_updater_name]': postNoteUpdaterName} : {}),
