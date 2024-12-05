@@ -104,7 +104,7 @@ final class Comment extends Resource {
 
   @override
   int get hashCode => 
-    creatorId.hashCode ^
+    createdAt.hashCode ^
     postId.hashCode ^ 
     creatorId.hashCode ^
     body.hashCode ^

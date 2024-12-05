@@ -17,6 +17,7 @@ part 'resources/post.dart';
 part 'resources/tag.dart';
 part 'resources/tag_alias.dart';
 part 'resources/tag_implication.dart';
+part 'resources/user.dart';
 part 'resources/vote.dart';
 
 /// A resource in the e621 API.
